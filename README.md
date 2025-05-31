@@ -93,7 +93,7 @@ This analysis helps identify the **optimal balance between accepting more applic
 
 The following plot shows how the bad rate changes as the loan approval threshold varies. This is essential for understanding risk exposure at different business decision levels.
 
-![Bad Rate vs Threshold]('bad rate.png')
+![Bad Rate vs Threshold](bad rate.png)
 
 ---
 
