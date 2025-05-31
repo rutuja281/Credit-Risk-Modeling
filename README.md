@@ -79,6 +79,36 @@ At each acceptance threshold, we compute:
 
 **Estimated Value = Total Accepted Loan Amount – Total Expected Loss**
 
+
+## Bad Rate Analysis
+
+After generating predicted probabilities of default using the trained model, we analyzed how the **bad rate** changes with different **probability thresholds** for loan approval.
+
+- **Bad Rate** refers to the percentage of approved loans that ultimately default.
+- As we lower the threshold (i.e., approve more applicants), we also increase the risk of default — resulting in a higher bad rate.
+
+This analysis helps identify the **optimal balance between accepting more applicants and minimizing losses**.
+
+### Visualization: Bad Rate by Probability Threshold
+
+The following plot shows how the bad rate changes as the loan approval threshold varies. This is essential for understanding risk exposure at different business decision levels.
+
+![Bad Rate vs Threshold](images/bad_rate.png)
+
+---
+
+## Results Summary
+
+- **XGBoost** consistently outperformed **Logistic Regression** in predictive performance, especially in ROC AUC.
+- **Default rates** were significantly higher for loans taken for **medical** and **debt consolidation** purposes.
+- **Renters** and applicants with **short credit histories** showed higher risk profiles.
+- The **strategy table** revealed how business teams can adjust thresholds to:
+  - Lower the default rate (bad rate)
+  - Increase expected portfolio value
+  - Make data-driven trade-offs between risk and volume
+- This project demonstrated how machine learning can be extended beyond classification to guide **financial strategy and decision-making** in lending.
+
+
 Example logic:
 
 ```python
